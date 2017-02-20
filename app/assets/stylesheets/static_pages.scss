@@ -15,24 +15,53 @@ html, body {
   margin-bottom: -75px;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: Futura, sans-serif;
-  color: blue;
-  text-alignment: left;
+  color: #fff;
+  display: block;
 }
 
+// navbar
 .navbar-default {
+  margin: -33px -33px 0;
   font-family: Futura, sans-serif;
   text-transform: uppercase;
 }
 
+// footer
 #footer {
   height: 75px;
-  background: blue;
+  margin-right: -33px;
+  margin-left: -33px;
+  background: #f8f8f8;
+  border-color: #e7e7e7;
 }
 
 .footer-element {
-  color: white;
-  float: right;
   font-family: Futura, sans-serif;
+}
+
+// landing page
+.carousel {
+  margin-right: -33px;
+  margin-left: - 33px;
+  overflow:hidden;
+}
+
+.carousel-inner img {
+  display: block;
+  margin: auto;
+  min-height: 100%;
+}
+
+.carousel-caption {
+  padding-bottom: 21%;
+  font-size: 30px;
+  text-shadow: none;
+}
+
+.header-caption {
+  padding: 25px;
+  background-color: rgba(231, 100, 47, 0.72);
+  display: inline-block;
 }
