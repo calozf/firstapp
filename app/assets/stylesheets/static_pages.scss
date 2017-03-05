@@ -33,6 +33,16 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+//contact page
+.jumbotron-contact {
+  padding: 48px 60px 48px 60px;
+}
+
+#contact-background {
+  margin-left: -33px;
+  margin-right: -33px;
+}
+
 
 // footer
 #footer {
@@ -69,6 +79,6 @@ h1, h2, h3, h4 {
 
 .header-caption {
   padding: 25px;
-  background-color: rgba(231, 100, 47, 0.72);
+  background-color: rgba(52, 122, 183, 0.72);
   display: inline-block;
 }
