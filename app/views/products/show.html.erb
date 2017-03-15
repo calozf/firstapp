@@ -8,12 +8,10 @@
       <div class="col-md-6 col-xs-12">
         <div class="grid-description-detail">
           <div class="description-detail">
-            <div class="">
               <h3><%= @product.name %></h3>
               <h5><%= @product.price %> Eur</h5>
               <h5><%= @product.colour %></h5>
               <p><%= @product.description %></p>
-            </div>
           </div>
         </div>
       </div>
@@ -24,20 +22,20 @@
         <h2>User Ratings</h2>
           <div class="col-md-6 col-xs-12">
               <div class="container-rating">
-                <% @product.highest_rating_comment.rating.times do %>
-                  <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true"></span>
-                <% end %>
+               
                 <h5>Good Product:</h5>
-                <p>"<%= @product.highest_rating_comment.body%>"</p>
-              </div>
+                <p><%= @product.highest_rating_comment %></p>
+                  <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true"></span>
+                <!--
+                <p>"<%= @product.highest_rating_comment.body%>"</p> -->
+              </div><!-- /container-rating -->
           </div>
           <div class="col-md-6 col-xs-12">
             <div class="container-rating">
-              <% @product.lowest_rating_comment.rating.times do %>
-                <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true"></span>
-              <% end %>
+              
               <h5>Bad Product:</h5>
-              <p>"<%= @product.lowest_rating_comment.body%>"</p>
+              <p><%= @product.lowest_rating_comment %></p>
+              <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true"></span>
             </div>
         </div>
       </div>
