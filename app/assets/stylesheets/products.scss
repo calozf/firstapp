@@ -1,3 +1,57 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// show product
+
+.product {
+  padding-top: 5em;
+}
+
+
+img.detail {
+  width: 100%;
+}
+
+.grid-description-detail{
+  padding-left: 15px;
+}
+
+.description-detail{
+  background: #F8F8F8;
+  padding: 5%;
+}
+
+.description-detail h3, 
+.description-detail h5,
+.description-detail p {
+  font-family: Futura, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.description-detail h3{
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.description-detail h5{
+  margin: 0px;
+}
+
+.description-detail p{
+  text-align: left;
+  color: #737373;
+}
+
+.thumbnail p {
+  margin: 10px;
+}
+
+.container-rating {
+  text-align: center;
+}
+
+.container-rating p{
+  margin: 10px;
+}

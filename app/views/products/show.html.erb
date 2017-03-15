@@ -1,29 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container product">
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+       <%= image_tag(@product.image_url, class: "img-responsive detail") %>
+    </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="grid-description-detail">
+          <div class="description-detail">
+            <div class="">
+              <h3><%= @product.name %></h3>
+              <h5><%= @product.price %> Eur</h5>
+              <h5><%= @product.colour %></h5>
+              <p><%= @product.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/ row -->
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h2>User Ratings</h2>
+          <div class="col-md-6 col-xs-12">
+              <div class="container-rating">
+                <% @product.highest_rating_comment.rating.times do %>
+                  <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true"></span>
+                <% end %>
+                <h5>Good Product:</h5>
+                <p>"<%= @product.highest_rating_comment.body%>"</p>
+              </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="container-rating">
+              <% @product.lowest_rating_comment.rating.times do %>
+                <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true"></span>
+              <% end %>
+              <h5>Bad Product:</h5>
+              <p>"<%= @product.lowest_rating_comment.body%>"</p>
+            </div>
+        </div>
+      </div>
+    </div><!--/ row -->
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+  </div>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div><!-- /container -->
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
