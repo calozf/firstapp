@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 describe UserController, :type => :controller do 
-    @user = User.create!(email: "example@mail.com", password: "123456")
-    @user2 = User.create!(email: "example2@mail.com", password: "012345")
+    @user = FactoryGirl.create(:user)
 
   describe "GET #show" do
     context "user is logged in" do
@@ -26,7 +25,7 @@ describe UserController, :type => :controller do
 
     context "current user is cannot access other user show page" do
       before do
-        sign_in @user2
+        sign_in @user
       end
 
       it "redirects to root" to
