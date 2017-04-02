@@ -62,15 +62,13 @@ end
 
 #user authentication
 gem 'devise'
-
 #user authorization
 gem 'cancancan', '~> 1.10'
-
 #pagination
 gem 'will_paginate', '~> 3.1.1'
-
 #controller testing
 gem 'rails-controller-testing'
-
 #FactoryGirl
 gem "factory_girl_rails", "~> 4.0"
+#Stripe
+gem 'stripe'
