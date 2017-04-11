@@ -72,3 +72,5 @@ gem 'rails-controller-testing'
 gem "factory_girl_rails", "~> 4.0"
 #Stripe
 gem 'stripe'
+#Rails security scanner
+gem "brakeman", :require => false
