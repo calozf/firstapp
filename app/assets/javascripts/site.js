@@ -7,7 +7,6 @@ $(document).on('turbolinks:load', function(){
       }
     });
 
-    /* elevate zoom plugin*/
     $(".img-zoom").elevateZoom({
       zoomWindowFadeIn: 500,
       zoomWindowFadeOut: 500,
