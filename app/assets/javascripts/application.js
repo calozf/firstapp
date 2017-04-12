@@ -14,8 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).on('turbolinks:load', function(){
-  console.log($('.alert'));
-  $('.alert').delay(2000).fadeOut('slow');
-});
