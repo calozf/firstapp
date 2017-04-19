@@ -2,6 +2,7 @@
 
 <div class="container product">
   <div class="row">
+    <% cache @product do %>
     <div class="col-md-6 col-xs-12">
        <%= image_tag(@product.image_url, class: "img-responsive detail img-zoom", data_zoom_image: "@product.image_url") %>
     </div>
@@ -20,6 +21,7 @@
           </div>
         </div>
       </div>
+    <% end %>
     </div><!--/ row -->
 
     <div class="row">

@@ -74,3 +74,4 @@ gem "factory_girl_rails", "~> 4.0"
 gem 'stripe'
 #Rails security scanner
 gem "brakeman", :require => false
+gem 'dalli'
