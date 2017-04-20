@@ -75,3 +75,4 @@ gem 'stripe'
 #Rails security scanner
 gem "brakeman", :require => false
 gem 'dalli'
+gem 'redis-rails'
