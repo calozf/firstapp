@@ -8,13 +8,18 @@ var refreshRating = function() {
     });
 };
 
-$(document).on('turbolinks:load ajaxSuccess', function() {
+$(document).on('turbolinks:load ajaxSuccess', function(){
+    $(".alert").delay(4000).fadeOut("slow");
+
+    /* raty plugin */
     refreshRating();
 
-    $(".img-zoom").elevateZoom({
-      zoomWindowFadeIn: 500,
-      zoomWindowFadeOut: 500,
-      lensFadeIn: 500,
-      lensFadeOut: 500
-  });
+    /* elevate zoom plugin*/
+    $('.img-zoom').elevateZoom({
+        zoomType: "lens", 
+        lensShape: "round", 
+        lensSize: 200, 
+        lensFadeIn: 400, 
+        lensFadeOut: 500
+    });
 });
