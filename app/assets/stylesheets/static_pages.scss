@@ -28,35 +28,6 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-//landing page
-.carousel-caption h1, h3 {
-  color: #fff;
-}
-
-//contact page
-.jumbotron-contact {
-  padding: 48px 60px 48px 60px;
-}
-
-#contact-background {
-  margin-left: -33px;
-  margin-right: -33px;
-}
-
-
-// footer
-#footer {
-  height: 75px;
-  margin-right: -33px;
-  margin-left: -33px;
-  background: #f8f8f8;
-  border-color: #e7e7e7;
-}
-
-.footer-element {
-  font-family: Futura, sans-serif;
-  text-align: center;
-}
 
 // landing page
 .carousel {
@@ -77,8 +48,35 @@ h1, h2, h3, h4 {
   text-shadow: none;
 }
 
+.carousel-caption h1, h3 {
+  color: #fff;
+}
+
 .header-caption {
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.74);
   display: inline-block;
+}
+
+//contact page
+.jumbotron-contact {
+  padding: 48px 60px 48px 60px;
+}
+
+#contact-background {
+  margin-left: -33px;
+  margin-right: -33px;
+}
+
+// about section
+#about-detail{
+  text-align: center;
+}
+
+// footer
+
+.footer-element {
+  font-family: Futura, sans-serif;
+  text-align: center;
+  padding: 10px;
 }

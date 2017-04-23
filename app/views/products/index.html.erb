@@ -1,13 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Products</h1>
-
 <div class="container">
+  <p id="notice"><%= notice %></p>
+
   <div class="row">
-    <% cache (cache_key_for_products) do %>
-      <%= render @products %>
+    <div class="col-md-10 col-xs-10">
+      <h1>Our Products</h1>
+    </div>
+    <% cache(cache_key_for_products) do %>
+    <%= render @products %>
     <% end %>
-</div>
-
-<%= link_to 'New Product', new_product_path %>
-
+  </div><!-- /row -->
+  <br>
+    <span class="btn-create"><%= link_to 'NEW PRODUCT', new_product_path %></span>
+</div><!-- /container -->
+<br>

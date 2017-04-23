@@ -3,6 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // show product
 
+// product overview
+
+.overview-detail h1,
+.overview-detail p{
+  text-align: center;
+}
+
+.overview-detail-links{
+  text-align: center;
+  margin: 15px;
+}
+
+.overview-detail-links span{
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+    border-color: #5f5f5f;
+    background: #F8F8F8;
+    margin-left: 5px;
+}
+
+.overview-detail-links a{
+  text-decoration: none;
+}
+
+// description product
 .product {
   padding-top: 5em;
 }
