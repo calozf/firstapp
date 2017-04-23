@@ -6,9 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
       respond_to do |format|
         if @comment.save
-        ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
-        format.html { redirect_to @product, notice: 'Review was created successfully.' }
-        format.json { render :show, status: :created, location: @product }
+        ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating        format.json { render :show, status: :created, location: @product }
         format.js
       else
         format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
