@@ -5,9 +5,7 @@
     <div class="col-md-10 col-xs-10">
       <h1>Our Products</h1>
     </div>
-    <% cache(cache_key_for_products) do %>
-    <%= render @products %>
-    <% end %>
+      <%= render @products %>
   </div><!-- /row -->
   <br>
     <span class="btn-create"><%= link_to 'NEW PRODUCT', new_product_path %></span>
