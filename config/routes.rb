@@ -1,22 +1,22 @@
 Rails.application.routes.draw do
-  
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => {:registrations => "user_registrations"}
+  resources :users
   resources :products do
     resources :comments
   end
-  resources :users
+
   resources :orders, only: [:index, :show, :create, :destroy]
 
 
   root 'static_pages#landing_page'
 
-  get 'static_pages/landing_page'
-
-  get 'static_pages/index'
+  get '/contact', to: 'static_pages#contact'
 
   get '/about', to: 'static_pages#about'
 
-  get '/contact', to: 'static_pages#contact'
+  get 'static_pages/index'
+
+  get 'static_pages/landing_page'
 
   post 'static_pages/thank_you'
 
