@@ -14,4 +14,11 @@ class UserMailer < ApplicationMailer
     mail( :to => user.email,
           :subject => "Welcome to #{@appname}!")
   end
+
+  def successful_payment(user, product)
+    @user = user
+    @product = product
+    mail(:to => user.email,
+        :subject => "Confirmation of purchase #{product.name}")
+  end
 end
